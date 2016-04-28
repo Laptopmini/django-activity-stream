@@ -95,6 +95,8 @@ class Action(models.Model):
 
     timestamp = models.DateTimeField(default=now, db_index=True)
 
+    read = models.BooleanField(blank=True, default=False)
+
     public = models.BooleanField(default=True, db_index=True)
 
     objects = actstream_settings.get_action_manager()
